@@ -5,30 +5,49 @@ using System.Collections;
 public class TargetStep
 {
     public TargetDrop target;
-    public float delayBeforeDrop; // time before this target drops
+    public float delayBeforeDrop;
+
+    public bool enableMovement;
+    public Vector3 moveDirection;
+    public float moveDistance;
+    public float moveSpeed;
 }
 
 public class TargetSequence : MonoBehaviour
 {
     public TargetStep[] sequence;
-    public bool loop = false;
 
-    void Start()
+    private Coroutine sequenceRoutine;
+
+    public void StartSequence()
     {
-        StartCoroutine(RunSequence());
+        sequenceRoutine = StartCoroutine(RunSequence());
+    }
+
+    public void StopSequence()
+    {
+        if (sequenceRoutine != null)
+            StopCoroutine(sequenceRoutine);
     }
 
     IEnumerator RunSequence()
     {
-        do
+        foreach (TargetStep step in sequence)
         {
-            foreach (TargetStep step in sequence)
-            {
-                yield return new WaitForSeconds(step.delayBeforeDrop);
+            yield return new WaitForSeconds(step.delayBeforeDrop);
 
-                step.target.DropTarget();
+            TargetMover mover = step.target.GetComponent<TargetMover>();
+
+            if (step.enableMovement && mover != null)
+            {
+                mover.Configure(step.moveDirection, step.moveDistance, step.moveSpeed);
+            }
+            else if (mover != null)
+            {
+                mover.StopMoving();
             }
 
-        } while (loop);
+            step.target.DropTarget();
+        }
     }
 }

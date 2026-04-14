@@ -5,44 +5,49 @@ public class TargetDrop : MonoBehaviour
 {
     public float dropAngle = 90f;
     public float rotationSpeed = 120f;
-    public float upDelay = 5f;
+    public float upDelay = 3f;
+
+    public int points = 10;
+    public AudioSource hitSound;
 
     private float currentAngle = 0f;
-    private bool isMoving = false;
     private bool isDown = false;
     private Coroutine resetCoroutine;
 
     void Update()
     {
-        //Rotate toward down state
         float targetAngle = isDown ? dropAngle : 0f;
 
         if (!Mathf.Approximately(currentAngle, targetAngle))
         {
             float step = rotationSpeed * Time.deltaTime;
             currentAngle = Mathf.MoveTowards(currentAngle, targetAngle, step);
+
             transform.localRotation = Quaternion.Euler(currentAngle, 0f, 0f);
         }
     }
 
-    //Drop Target
     public void DropTarget()
     {
-        if (isDown || isMoving) return;
+        if (isDown) return;
 
         isDown = true;
 
-        // Start timer to go back up if not hit
         if (resetCoroutine != null)
             StopCoroutine(resetCoroutine);
 
         resetCoroutine = StartCoroutine(AutoReset());
     }
 
-    //Called when shot
     public void OnHit()
     {
         if (!isDown) return;
+        if (!GameManager.Instance.IsGameActive) return;
+
+        if (hitSound != null)
+            hitSound.PlayOneShot(hitSound.clip);
+
+        ScoreManager.Instance.AddScore(points);
 
         GoUp();
     }
@@ -51,10 +56,8 @@ public class TargetDrop : MonoBehaviour
     {
         yield return new WaitForSeconds(upDelay);
 
-        if (isDown) // only reset if still down
-        {
+        if (isDown)
             GoUp();
-        }
     }
 
     void GoUp()
@@ -63,5 +66,12 @@ public class TargetDrop : MonoBehaviour
 
         if (resetCoroutine != null)
             StopCoroutine(resetCoroutine);
+
+        GetComponent<TargetMover>()?.StopMoving();
+    }
+
+    public bool IsDown()
+    {
+        return isDown;
     }
 }

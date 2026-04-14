@@ -1,0 +1,180 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &160849806204790151
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7512668610498669583}
+  m_Layer: 0
+  m_Name: Controllers
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7512668610498669583
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 160849806204790151}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.85628, y: 1.3287, z: 11.41842}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 6443788347359481898}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &9061980946864432970
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6443788347359481898}
+  - component: {fileID: 1549026993874601482}
+  m_Layer: 0
+  m_Name: TargetSequenceController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6443788347359481898
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9061980946864432970}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7512668610498669583}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1549026993874601482
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9061980946864432970}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36c2138dbe4a25546b6bfd92469ea3a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TargetSequence
+  sequence:
+  - target: {fileID: 0}
+    delayBeforeDrop: 0
+  - target: {fileID: 0}
+    delayBeforeDrop: 0
+  - target: {fileID: 0}
+    delayBeforeDrop: 0
+  - target: {fileID: 0}
+    delayBeforeDrop: 0
+  - target: {fileID: 0}
+    delayBeforeDrop: 7.5
+  - target: {fileID: 0}
+    delayBeforeDrop: 0
+  - target: {fileID: 0}
+    delayBeforeDrop: 0
+  - target: {fileID: 0}
+    delayBeforeDrop: 0
+  - target: {fileID: 0}
+    delayBeforeDrop: 0
+  - target: {fileID: 0}
+    delayBeforeDrop: 0
+  - target: {fileID: 0}
+    delayBeforeDrop: 0
+  - target: {fileID: 0}
+    delayBeforeDrop: 0
+  - target: {fileID: 0}
+    delayBeforeDrop: 0
+  - target: {fileID: 0}
+    delayBeforeDrop: 0
+  - target: {fileID: 0}
+    delayBeforeDrop: 0
+  - target: {fileID: 0}
+    delayBeforeDrop: 0
+  - target: {fileID: 0}
+    delayBeforeDrop: 0
+  - target: {fileID: 0}
+    delayBeforeDrop: 0
+  - target: {fileID: 0}
+    delayBeforeDrop: 0
+  - target: {fileID: 0}
+    delayBeforeDrop: 0
+  - target: {fileID: 0}
+    delayBeforeDrop: 0
+  - target: {fileID: 0}
+    delayBeforeDrop: 0
+  - target: {fileID: 0}
+    delayBeforeDrop: 0
+  - target: {fileID: 0}
+    delayBeforeDrop: 0
+  - target: {fileID: 0}
+    delayBeforeDrop: 0
+  - target: {fileID: 0}
+    delayBeforeDrop: 0
+  - target: {fileID: 0}
+    delayBeforeDrop: 0
+  - target: {fileID: 0}
+    delayBeforeDrop: 0
+  - target: {fileID: 0}
+    delayBeforeDrop: 0
+  - target: {fileID: 0}
+    delayBeforeDrop: 0
+  - target: {fileID: 0}
+    delayBeforeDrop: 0
+  - target: {fileID: 0}
+    delayBeforeDrop: 0
+  - target: {fileID: 0}
+    delayBeforeDrop: 0
+  - target: {fileID: 0}
+    delayBeforeDrop: 0
+  - target: {fileID: 0}
+    delayBeforeDrop: 0
+  - target: {fileID: 0}
+    delayBeforeDrop: 0
+  - target: {fileID: 0}
+    delayBeforeDrop: 0
+  - target: {fileID: 0}
+    delayBeforeDrop: 0
+  - target: {fileID: 0}
+    delayBeforeDrop: 0
+  - target: {fileID: 0}
+    delayBeforeDrop: 0
+  - target: {fileID: 0}
+    delayBeforeDrop: 0
+  - target: {fileID: 0}
+    delayBeforeDrop: 0
+  - target: {fileID: 0}
+    delayBeforeDrop: 0
+  - target: {fileID: 0}
+    delayBeforeDrop: 0
+  - target: {fileID: 0}
+    delayBeforeDrop: 0
+  - target: {fileID: 0}
+    delayBeforeDrop: 0
+  - target: {fileID: 0}
+    delayBeforeDrop: 0
+  - target: {fileID: 0}
+    delayBeforeDrop: 0
+  - target: {fileID: 0}
+    delayBeforeDrop: 0
+  - target: {fileID: 0}
+    delayBeforeDrop: 0
+  loop: 0
