@@ -1,4 +1,5 @@
 using UnityEngine;
+using TMPro;
 
 public class GameManager : MonoBehaviour
 {
@@ -7,6 +8,9 @@ public class GameManager : MonoBehaviour
     [Header("References")]
     public TargetSequence sequence;
     public GameObject endScreen;
+
+    [Header("End Screen UI")]
+    public TextMeshProUGUI finalScoreText;
 
     public bool IsGameActive = false;
 
@@ -30,6 +34,11 @@ public class GameManager : MonoBehaviour
         if (sequence != null)
             sequence.StopSequence();
 
+        //SET SCORE TEXT
+        if (finalScoreText != null)
+            finalScoreText.text = "Score: " + ScoreManager.Instance.score + "!";
+
+        //SHOW END SCREEN
         if (endScreen != null)
             endScreen.SetActive(true);
     }

@@ -7,7 +7,7 @@ public class TargetDrop : MonoBehaviour
     public float rotationSpeed = 120f;
     public float upDelay = 3f;
 
-    public int points = 10;
+    public int points = 100;
     public AudioSource hitSound;
 
     private float currentAngle = 0f;

@@ -24,6 +24,14 @@ public class Bullet : MonoBehaviour
             target.OnHit();
         }
 
+
+        //Handle menu buttons
+        ShootableButton button = collision.collider.GetComponentInParent<ShootableButton>();
+        if (button != null)
+        {
+            button.OnHit();
+        }
+
         Destroy(gameObject);
     }
 }
