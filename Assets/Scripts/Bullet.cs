@@ -32,6 +32,13 @@ public class Bullet : MonoBehaviour
             button.OnHit();
         }
 
+        //Handle hand trigger button
+        HandToggleButton toggle = collision.collider.GetComponentInParent<HandToggleButton>();
+        if (toggle != null)
+        {
+            toggle.OnHit();
+        }
+
         Destroy(gameObject);
     }
 }
