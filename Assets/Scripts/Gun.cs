@@ -25,6 +25,7 @@ public class Gun : MonoBehaviour
 
     void Shoot()
     {
-        Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+        Vector3 spawnPos = firePoint.position + firePoint.forward * 1.3f;
+        Instantiate(bulletPrefab, spawnPos, firePoint.rotation);
     }
 }
