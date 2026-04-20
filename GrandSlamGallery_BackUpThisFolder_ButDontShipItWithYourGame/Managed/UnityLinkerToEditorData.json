@@ -1844,8 +1844,7 @@
             "name": "VideoClip",
             "scenes": [
               "Assets/Scenes/SG-Easy.unity",
-              "Assets/Scenes/SG-Hard.unity",
-              "Assets/Scenes/SG-MainMenu.unity"
+              "Assets/Scenes/SG-Hard.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -1854,8 +1853,7 @@
             "name": "VideoPlayer",
             "scenes": [
               "Assets/Scenes/SG-Easy.unity",
-              "Assets/Scenes/SG-Hard.unity",
-              "Assets/Scenes/SG-MainMenu.unity"
+              "Assets/Scenes/SG-Hard.unity"
             ],
             "dependencyType": 0,
             "icon": null
